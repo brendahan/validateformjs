@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="box1">Registration form </h1>
+<form id="contact-form" action="" name="regform" onsubmit="formValidation()">
+    <label> First Name</label>
+    <br><input type="text" placeholder="Your First name.."name="fname">
+    <br><label> Last Name</label>
+    <br><input type="text" placeholder="Your Last name.."name="lname">
+    <br><label> Email</label>
+    <br><input type="email" placeholder="Enter your email"name="email">
+    <br><label for="phone">Enter a phone number:</label><br><br>
+    <input type="tel" id="phone" name="phone" placeholder="+000-000-000-000" pattern="[+2]{3}-[0-9]{2}-[0-9]{3}" required><br>
+    <small>Format: 123-45-678</small><br>
+<br><select class="origin" name= "origin" type="text" required="required">
+    <option value="nationality">Select Nationality</option>
+    <option value="nationality">Uganda</option>
+    <option value="nationality" >Kenya</option>
+    <option value="nationality" >Tanzania</option>
+    <option value="nationality" >Burundi</option>
+</select>
+<br><label>Age</label>
+    <br><input type="number" placeholder="Enter your Age"name="age"><br>
+<br><label>Gender:</label<br>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female<br>
+        <br><button class="submit" type="submit">Submit</button>
+</form>
+</div>
+<script src="behavior.js"></script>
+</body>
+</html>
