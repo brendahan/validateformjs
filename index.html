@@ -10,28 +10,41 @@
 <body>
     <div class="container">
         <h1 class="box1">Registration form </h1>
-<form id="contact-form" action="" name="regform" onsubmit="formValidation()">
-    <label> First Name</label>
-    <br><input type="text" placeholder="Your First name.."name="fname">
-    <br><label> Last Name</label>
-    <br><input type="text" placeholder="Your Last name.."name="lname">
-    <br><label> Email</label>
-    <br><input type="email" placeholder="Enter your email"name="email">
-    <br><label for="phone">Enter a phone number:</label><br><br>
-    <input type="tel" id="phone" name="phone" placeholder="+000-000-000-000" pattern="[+2]{3}-[0-9]{2}-[0-9]{3}" required><br>
-    <small>Format: 123-45-678</small><br>
-<br><select class="origin" name= "origin" type="text" required="required">
-    <option value="nationality">Select Nationality</option>
-    <option value="nationality">Uganda</option>
-    <option value="nationality" >Kenya</option>
-    <option value="nationality" >Tanzania</option>
-    <option value="nationality" >Burundi</option>
+    <form id="contact-form" name="regForm" method="" onsubmit="return validateForm()">
+        <div class="form-group">
+        <label> First Name</label><br><span id="errorFirstName"></span>
+    <br><input type="text" class="form-control" placeholder="Your First name.."name="fname">
+</div>
+<div class="form-group">
+    <br><label> Last Name</label><br><span id="errorLastName"></span>
+    <br><input type="text" class="form-control" placeholder="Your Last name.."name="lname">
+</div>
+<div class="form-group">
+    <br><label> Email</label><br><span id="errorEmail"></span>
+    <br><input type="email" class="form-control" placeholder="Enter your email"name="email">
+</div>
+<div class="form-group">
+    <br><label for="phone">Phone number:</label><br><span id="errorPhone"></span>
+<input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" name="phone"><br>
+</div>
+<div class="form-group">
+<br><select id="origin" name= "origin" type="text" >
+    <option value="nationality">Select Nationality</option><span id="errorOrigin"></span>
+    <option value="nationality">Ugandan</option>
+    <option value="nationality" >Kenyan</option>
+    <option value="nationality" >Tanzanian</option>
+    <option value="nationality" ></option>
 </select>
-<br><label>Age</label>
-    <br><input type="number" placeholder="Enter your Age"name="age"><br>
-<br><label>Gender:</label<br>
+</div>
+<div class="form-group">
+<br><label>Age</label><br><span id="errorAge"></span>
+    <br><input type="number"  class="form-control" placeholder="Enter your Age"name="age"><br>
+</div>
+    <div class="form-group">
+<br><label>Gender:</label<br><span id="errorGender"></span>
         <input type="radio" name="gender" value="Male">Male
         <input type="radio" name="gender" value="Female">Female<br>
+        </div>
         <br><button class="submit" type="submit">Submit</button>
 </form>
 </div>
