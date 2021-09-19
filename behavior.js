@@ -4,10 +4,9 @@ function validateForm(){
   var lastName = document.forms["regForm"]["lname"].value;
 var email = document.forms["regForm"]["email"].value;
 var tel= document.forms["regForm"]["phone"].value;
-var origin = document.forms["regForm"]["origin"].value;
+var result = document.forms["regForm"]["origin"].value;
   var age = document.forms["regForm"]["age"].value;
 var gender= document.forms["regForm"]["gender"].value;
-
 
 if (firstName.length<1) {
       document.getElementById('errorFirstName').innerHTML = " Please Enter Your first name *";
@@ -18,7 +17,7 @@ if (firstName.length<1) {
       errorLastName.style.color = 'red';
   }
   if (email.length<1) {
-      document.getElementById('errorEmail').innerHTML = " Please Enter Your last name *";
+      document.getElementById('errorEmail').innerHTML = " Please Enter Your email *";
       errorEmail.style.color = 'red';
   }
   if (tel.length<1) {
@@ -29,15 +28,15 @@ if (firstName.length<1) {
       document.getElementById('errorAge').innerHTML = " Please Enter Your age *"; 
       errorAge.style.color = 'red';     
   }
-  if (origin.length<1) {
-      document.getElementById('errorOrigin').innerHTML = " Please select Your origin *";
+  if (origin.value === "0") {
+      document.getElementById('errorOrigin').innerHTML = " Please select an option *";
       errorOrigin.style.color = 'red';
-  }          
+  }
   if (gender.length<1) {
       document.getElementById('errorGender').innerHTML = " Please Select your gender *"; 
       errorGender.style.color = 'red';     
   }
-  if(firstName.length<1 || lastName.length<1 || email.length<1 || tel.length<1 || origin.length<1 || age.length<1 || gender.length<1 ){
+  if(firstName.length<1 || lastName.length<1 || email.length<1 || tel.length<1 || origin.value === "0" || age.length<1 || gender.length<1 ){
        return false;
   }            
 }

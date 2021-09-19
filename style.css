@@ -29,9 +29,9 @@ border: #040d36 2px solid;
     color: #040d36;
     line-height:13px;
     padding:20px;
-    margin-left:300px;
-    width:500px;
-    height:550px;
+    margin-left:400px;
+    width:550px;
+    height:530px;
     margin-top:20px;
 }
 input[type=email],[type=text],[type=number],[type=tel]{
@@ -57,7 +57,8 @@ button{
     margin: 0px 2px;
     cursor: pointer;
     font-size: large;
-    margin-left: 180px;
+    margin-left: 350px;
+    
 } 
  button:hover{
     border:1px whitesmoke solid ;
